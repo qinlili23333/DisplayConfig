@@ -47,13 +47,13 @@ namespace MartinGC94.DisplayConfig.API
             DevicePath = displayNameInfo.monitorDevicePath;
         }
 
-        internal static DisplayInfo GetDisplayInfo(DisplayConfig config, uint displayId)
+        public static DisplayInfo GetDisplayInfo(DisplayConfig config, uint displayId)
         {
             int index = config.GetDisplayIndex(displayId);
             return new DisplayInfo(config, index, displayId);
         }
 
-        internal static DisplayInfo GetDisplayInfo(DisplayConfig config, int displayIndex)
+        public static DisplayInfo GetDisplayInfo(DisplayConfig config, int displayIndex)
         {
             uint id = config.GetDisplayId(displayIndex);
             return new DisplayInfo(config, displayIndex, id);
