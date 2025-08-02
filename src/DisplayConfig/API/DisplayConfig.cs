@@ -1018,7 +1018,7 @@ namespace MartinGC94.DisplayConfig.API
             return new ModeInfo(modeInfo);
         }
 
-        internal static void EnableDisableDisplay(Cmdlet cmd, uint[] displaysToEnable, uint[] displaysToDisable, bool asClone = false)
+        public static void EnableDisableDisplay(Cmdlet cmd, uint[] displaysToEnable, uint[] displaysToDisable, bool asClone = false)
         {
             var config = GetConfig(cmd);
             var displaysToEnableSet = new HashSet<int>();
