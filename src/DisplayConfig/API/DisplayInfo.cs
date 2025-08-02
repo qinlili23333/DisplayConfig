@@ -44,6 +44,10 @@ namespace MartinGC94.DisplayConfig.API
             }
 
             ConnectionType = (ConnectionType)displayNameInfo.outputTechnology;
+            if (DisplayName == string.Empty && ConnectionType==ConnectionType.Internal)
+            {
+                DisplayName = "Internal Display";
+            }
             DevicePath = displayNameInfo.monitorDevicePath;
         }
 
